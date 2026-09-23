@@ -9,7 +9,6 @@ head:
 
 <script setup>
 import { airportsData } from '../data/airports';
-import TopicCluster from '../.vitepress/theme/components/TopicCluster.vue';
 </script>
 
 # 04 机场深度评测 · 标准化实机体验报告
@@ -26,33 +25,28 @@ import TopicCluster from '../.vitepress/theme/components/TopicCluster.vue';
 ## 📝 最新深度评测长文合集
 
 <div class="space-y-4 my-6">
-  <div
-    v-for="item in airportsData"
-    :key="item.id"
-    class="cream-card p-5 hover:border-amber-400 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
-  >
-    <div class="flex-1">
-      <div class="flex items-center gap-2">
-        <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
-          评测得分 {{ item.rating.toFixed(1) }}
-        </span>
-        <h3 class="text-lg font-bold text-stone-900 m-0">
-          <a :href="item.reviewPath" class="no-underline text-stone-900 hover:text-amber-700">
-            {{ item.name }} 深度实机使用评测报告
-          </a>
-        </h3>
-      </div>
-      <p class="text-xs text-stone-600 mt-1.5 m-0 line-clamp-2">
-        {{ item.tagline }} 包含晚高峰测速、4K流媒体缓冲与 Claude 3.5 解锁实测。
-      </p>
+<div v-for="item in airportsData" :key="item.id" class="cream-card p-5 hover:border-amber-400 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+  <div class="flex-1">
+    <div class="flex items-center gap-2">
+      <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+        评测得分 {{ item.rating.toFixed(1) }}
+      </span>
+      <h3 class="text-lg font-bold text-stone-900 m-0">
+        <a :href="item.reviewPath" class="no-underline text-stone-900 hover:text-amber-700">
+          {{ item.name }} 深度实机使用评测报告
+        </a>
+      </h3>
     </div>
-
-    <div class="flex items-center gap-3">
-      <a :href="item.reviewPath" class="btn-primary text-xs px-4 py-2">
-        阅读完整评测长文 →
-      </a>
-    </div>
+    <p class="text-xs text-stone-600 mt-1.5 m-0 line-clamp-2">
+      {{ item.tagline }} 包含晚高峰测速、4K流媒体缓冲与 Claude 3.5 解锁实测。
+    </p>
   </div>
+  <div class="flex items-center gap-3">
+    <a :href="item.reviewPath" class="btn-primary text-xs px-4 py-2">
+      阅读完整评测长文 →
+    </a>
+  </div>
+</div>
 </div>
 
 <TopicCluster title="04 机场深度评测" />

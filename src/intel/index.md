@@ -9,9 +9,6 @@ head:
 
 <script setup>
 import { airportsData } from '../data/airports';
-import RiskBanner from '../.vitepress/theme/components/RiskBanner.vue';
-import TopicCluster from '../.vitepress/theme/components/TopicCluster.vue';
-
 const riskList = airportsData.filter(a => a.status !== 'active');
 </script>
 
@@ -24,25 +21,17 @@ const riskList = airportsData.filter(a => a.status !== 'active');
 ## 🚨 当前高风险与已熔断服务商预警
 
 <div v-if="riskList.length > 0" class="my-6 space-y-4">
-  <div
-    v-for="item in riskList"
-    :key="item.id"
-    class="cream-card border-red-300 bg-red-50/30 p-5"
-  >
-    <div class="flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="badge-tag badge-red text-xs">⚠️ 风险预警</span>
-        <h3 class="text-lg font-bold text-red-900 m-0">{{ item.name }}</h3>
-      </div>
-      <span class="text-xs font-mono text-red-700 bg-red-100 px-2 py-0.5 rounded">熔断封禁</span>
+<div v-for="item in riskList" :key="item.id" class="cream-card border-red-300 bg-red-50/30 p-5">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="badge-tag badge-red text-xs">⚠️ 风险预警</span>
+      <h3 class="text-lg font-bold text-red-900 m-0">{{ item.name }}</h3>
     </div>
-
-    <RiskBanner :notice="item.statusNotice || '该机场近期节点大面积红损失联，本站已停用其所有直达链接。'" />
-
-    <p class="text-xs text-stone-600 m-0">
-      风险溯源：{{ item.cons.join('；') }}
-    </p>
+    <span class="text-xs font-mono text-red-700 bg-red-100 px-2 py-0.5 rounded">熔断封禁</span>
   </div>
+  <RiskBanner :notice="item.statusNotice || '该机场近期节点大面积红损失联，本站已停用其所有直达链接。'" />
+  <p class="text-xs text-stone-600 m-0">风险溯源：{{ item.cons.join('；') }}</p>
+</div>
 </div>
 
 ---

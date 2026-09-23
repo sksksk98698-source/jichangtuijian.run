@@ -9,8 +9,6 @@ head:
 
 <script setup>
 import { airportsData } from '../data/airports';
-import JumpButton from '../.vitepress/theme/components/JumpButton.vue';
-import TopicCluster from '../.vitepress/theme/components/TopicCluster.vue';
 </script>
 
 # 03 机场品牌库 · 权威服务商全景名录
@@ -22,36 +20,30 @@ import TopicCluster from '../.vitepress/theme/components/TopicCluster.vue';
 ## 🗂️ 热门品牌独立档案列表
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-  <div
-    v-for="item in airportsData"
-    :key="item.id"
-    class="cream-card p-5 hover:border-amber-400 transition-all"
-  >
-    <div class="flex items-start justify-between">
-      <div>
-        <h3 class="text-lg font-bold text-stone-900 m-0">
-          <a :href="`/brands/${item.slug}`" class="hover:text-amber-700 no-underline text-stone-900">
-            {{ item.name }}
-          </a>
-        </h3>
-        <p class="text-xs text-stone-500 mt-1 m-0">运营 {{ 2026 - item.establishedYear }} 年 · {{ item.bandwidth }}</p>
-      </div>
-      <span v-if="item.status === 'active'" class="badge-tag badge-green text-xs">运营正常</span>
-      <span v-else class="badge-tag badge-red text-xs">风险预警</span>
+<div v-for="item in airportsData" :key="item.id" class="cream-card p-5 hover:border-amber-400 transition-all">
+  <div class="flex items-start justify-between">
+    <div>
+      <h3 class="text-lg font-bold text-stone-900 m-0">
+        <a :href="`/brands/${item.slug}`" class="hover:text-amber-700 no-underline text-stone-900">
+          {{ item.name }}
+        </a>
+      </h3>
+      <p class="text-xs text-stone-500 mt-1 m-0">运营 {{ 2026 - item.establishedYear }} 年 · {{ item.bandwidth }}</p>
     </div>
-
-    <p class="text-xs text-stone-600 my-3 leading-relaxed">
-      {{ item.tagline }}
-    </p>
-
-    <div class="flex items-center justify-between pt-3 border-t border-stone-100 text-xs">
-      <span class="font-bold text-amber-700 font-mono">¥{{ item.priceStarting }}/{{ item.cycle }} 起</span>
-      <div class="flex gap-2">
-        <a :href="`/brands/${item.slug}`" class="btn-outline text-xs px-2.5 py-1">品牌档案 →</a>
-        <JumpButton :airport-id="item.id" :name="item.name" :status="item.status" label="官网" />
-      </div>
+    <span v-if="item.status === 'active'" class="badge-tag badge-green text-xs">运营正常</span>
+    <span v-else class="badge-tag badge-red text-xs">风险预警</span>
+  </div>
+  <p class="text-xs text-stone-600 my-3 leading-relaxed">
+    {{ item.tagline }}
+  </p>
+  <div class="flex items-center justify-between pt-3 border-t border-stone-100 text-xs">
+    <span class="font-bold text-amber-700 font-mono">¥{{ item.priceStarting }}/{{ item.cycle }} 起</span>
+    <div class="flex gap-2">
+      <a :href="`/brands/${item.slug}`" class="btn-outline text-xs px-2.5 py-1">品牌档案 →</a>
+      <JumpButton :airport-id="item.id" :name="item.name" :status="item.status" label="官网" />
     </div>
   </div>
+</div>
 </div>
 
 <TopicCluster title="03 机场品牌库" />

@@ -69,17 +69,16 @@ const pair = airportsData.filter(a => a.id === 'feimaoyun' || a.id === 'yuzhouyu
 | **追求性价比的高端专线体验** | **飞猫云** | 起步仅 25 元，配合折扣码后折算性价比突出 |
 
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
-  <div class="p-5 cream-card text-center">
-    <h3 class="text-base font-bold text-stone-900 mb-1">选择 飞猫云 (FlyingCat)</h3>
-    <p class="text-xs text-stone-500 mb-4">IEPL 专线 · 原生住宅 IP · 晚高峰 8K 秒开</p>
-    <JumpButton airport-id="feimaoyun" name="飞猫云" label="前往飞猫云官网" />
-  </div>
-
-  <div class="p-5 cream-card text-center">
-    <h3 class="text-base font-bold text-stone-900 mb-1">选择 宇宙云 (CosmoCloud)</h3>
-    <p class="text-xs text-stone-500 mb-4">IPLC 专线 · 6 年老牌 · 电竞级超低抖动</p>
-    <JumpButton airport-id="yuzhouyun" name="宇宙云" label="前往宇宙云官网" variant="secondary" />
-  </div>
+<div class="p-5 cream-card text-center">
+  <h3 class="text-base font-bold text-stone-900 mb-1">选择 飞猫云 (FlyingCat)</h3>
+  <p class="text-xs text-stone-500 mb-4">IEPL 专线 · 原生住宅 IP · 晚高峰 8K 秒开</p>
+  <JumpButton airport-id="feimaoyun" name="飞猫云" label="前往飞猫云官网" />
+</div>
+<div class="p-5 cream-card text-center">
+  <h3 class="text-base font-bold text-stone-900 mb-1">选择 宇宙云 (CosmoCloud)</h3>
+  <p class="text-xs text-stone-500 mb-4">IPLC 专线 · 6 年老牌 · 电竞级超低抖动</p>
+  <JumpButton airport-id="yuzhouyun" name="宇宙云" label="前往宇宙云官网" variant="secondary" />
+</div>
 </div>
 
 <TopicCluster title="飞猫云 vs 宇宙云对比" />

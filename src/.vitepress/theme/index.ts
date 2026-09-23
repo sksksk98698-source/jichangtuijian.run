@@ -9,6 +9,7 @@ import BenchmarkBar from './components/BenchmarkBar.vue';
 import JumpButton from './components/JumpButton.vue';
 import RiskBanner from './components/RiskBanner.vue';
 import TopicCluster from './components/TopicCluster.vue';
+import HomePage from './components/HomePage.vue';
 
 export default {
   extends: DefaultTheme,
@@ -20,5 +21,6 @@ export default {
     app.component('JumpButton', JumpButton);
     app.component('RiskBanner', RiskBanner);
     app.component('TopicCluster', TopicCluster);
+    app.component('HomePage', HomePage);
   }
 } satisfies Theme;

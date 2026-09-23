@@ -1,0 +1,225 @@
+/**
+ * 品牌化简奶白主题 (Cream Editorial Milk-White Theme)
+ * 专为 jichangtuijian.run 定制，结合温暖奶白纸性质感与专业评测杂志排版
+ */
+
+:root {
+  /* 奶白核心背景系统 */
+  --vp-c-bg: #FAF8F5;
+  --vp-c-bg-alt: #F3EFEA;
+  --vp-c-bg-soft: #EFE9E1;
+  --vp-c-bg-elv: #FFFFFF;
+
+  /* 墨水炭黑文字系统 */
+  --vp-c-text-1: #1C1917;
+  --vp-c-text-2: #44403C;
+  --vp-c-text-3: #78716C;
+
+  /* 边框与微细分割线 */
+  --vp-c-border: #E5DFD5;
+  --vp-c-divider: #EAE4DA;
+  --vp-c-gutter: #E5DFD5;
+
+  /* 品牌核心主色：暖琥珀金 (Warm Amber) */
+  --vp-c-brand-1: #B45309;
+  --vp-c-brand-2: #D97706;
+  --vp-c-brand-3: #92400E;
+  --vp-c-brand-soft: #FEF3C7;
+
+  /* 状态辅助色 */
+  --vp-c-success: #15803D;
+  --vp-c-warning: #B45309;
+  --vp-c-danger: #DC2626;
+
+  /* 导航栏与布局定制 */
+  --vp-nav-bg-color: rgba(250, 248, 245, 0.88);
+  --vp-nav-screen-bg-color: #FAF8F5;
+  --vp-sidebar-bg-color: #FAF8F5;
+
+  /* 字体系统 */
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", Consolas, Monaco, "Courier New", monospace;
+}
+
+/* 页面主体修饰 */
+body {
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  letter-spacing: -0.01em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 顶部导航毛玻璃 */
+.VPNav {
+  backdrop-filter: blur(12px) saturate(180%);
+  border-bottom: 1px solid var(--vp-c-border);
+}
+
+/* 英雄区定制 */
+.VPHero {
+  padding-top: 40px !important;
+}
+
+.VPHero .name {
+  background: linear-gradient(135deg, #1C1917 20%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* 奶白卡片规范 (Card UI) */
+.cream-card {
+  background: #FFFFFF;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(28, 25, 23, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cream-card:hover {
+  transform: translateY(-2px);
+  border-color: #D6CEBE;
+  box-shadow: 0 8px 24px rgba(28, 25, 23, 0.07);
+}
+
+/* 徽章 Badge 规范 */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  line-height: 1.2;
+}
+
+.badge-amber {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+}
+
+.badge-blue {
+  background: #EFF6FF;
+  color: #1E40AF;
+  border: 1px solid #DBEAFE;
+}
+
+.badge-green {
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+
+.badge-red {
+  background: #FEF2F2;
+  color: #991B1B;
+  border: 1px solid #FECACA;
+}
+
+/* 按钮微交互 */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #1C1917;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(28, 25, 23, 0.2);
+}
+
+.btn-primary:hover {
+  background: #B45309;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.25);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  color: #1C1917 !important;
+  border: 1px solid var(--vp-c-border);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: var(--vp-c-bg-alt);
+  border-color: #B45309;
+  color: #B45309 !important;
+}
+
+/* 测速条进度表 */
+.metric-bar-wrap {
+  width: 100%;
+  height: 8px;
+  background: #EFE9E1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.metric-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #D97706, #10B981);
+  transition: width 0.6s ease;
+}
+
+/* 优惠码复制盒 */
+.coupon-box {
+  background: #FFFBEB;
+  border: 1px dashed #F59E0B;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #92400E;
+}
+
+/* 对比表格排版 */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-border);
+}
+
+.compare-table th {
+  background: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-1);
+  font-weight: 700;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--vp-c-border);
+}
+
+.compare-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+}
+
+.compare-table tr:last-child td {
+  border-bottom: none;
+}

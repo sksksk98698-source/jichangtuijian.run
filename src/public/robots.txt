@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /go/
+Disallow: /out/
+
+Allow: /
+
+Sitemap: https://jichangtuijian.run/sitemap.xml

@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vitepress dev src",
     "generate:pages": "node --experimental-strip-types scripts/generate-pages.ts",
-    "build": "vitepress build src && pagefind --site src/.vitepress/dist",
+    "generate:rss": "node --experimental-strip-types scripts/generate-rss.ts",
+    "seo:check": "node --experimental-strip-types scripts/seo-health-check.ts",
+    "indexnow": "node --experimental-strip-types scripts/indexnow.ts",
+    "build": "npm run generate:rss && vitepress build src && pagefind --site src/.vitepress/dist && npm run seo:check",
     "build:no-search": "vitepress build src",
     "preview": "vitepress preview src",
     "index:search": "pagefind --site src/.vitepress/dist"

@@ -1,56 +1,126 @@
 ---
-title: Android 与 iPhone 手机端最优方案 (2026权威指南)
-description: 2026年最新手机客户端指南：深度解析Android 与 iPhone 手机端最优方案，结合晚高峰实测数据、线路架构与价格套餐，提供专业选购与避坑指引。
+title: 2026 手机移动端（iOS / Android）全平台科学上网客户端选型全景
+description: 2026年手机端科学上网完全指南：深度对比小火箭Shadowrocket、Surfboard与飞猫云自研手机端，解答耗电、规则分流与推送通知痛点。
 head:
   - - meta
     - name: keywords
-      content: 手机客户端, Clash, Clash Verge, Mihomo, Shadowrocket, v2rayN, sing-box
+      content: 手机翻墙软件, 手机科学上网工具, 小火箭教程, 安卓翻墙软件, 手机长续航配置
+  - - link
+    - rel: canonical
+      href: https://jichangtuijian.run/clients/mobile
+  - - script
+    - type: application/ld+json
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "2026 手机移动端（iOS / Android）全平台科学上网客户端选型全景",
+        "description": "2026年手机端科学上网完全指南：深度对比小火箭Shadowrocket、Surfboard与飞猫云自研手机端，解答耗电、规则分流与推送通知痛点。",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://jichangtuijian.run/clients/mobile"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "机场推荐评测实验室",
+          "url": "https://jichangtuijian.run"
+        }
+      }
+  - - script
+    - type: application/ld+json
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "手机一直挂着代理发热严重怎么解决？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "检查是否开启了全局模式或误开了大文件 P2P 下载，切换为规则分流模式即可瞬间降温。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "出国后在境外还能继续用吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "出国后直接在客户端关闭代理开关，使用当地 Wi-Fi 或本地 SIM 卡直接访问即可。"
+            }
+          }
+        ]
+      }
 ---
 
 <script setup>
 import { airportsData } from '../data/airports';
-const featuredList = airportsData.filter(a => a.featured && a.status === 'active');
+import AirportCard from '../.vitepress/theme/components/AirportCard.vue';
+import CompareTable from '../.vitepress/theme/components/CompareTable.vue';
+import TopicCluster from '../.vitepress/theme/components/TopicCluster.vue';
+
+const targetIds = ["feimaoyun","guangsucloud","breezenet"];
+const displayAirports = airportsData.filter(a => targetIds.includes(a.id));
 </script>
 
-# Android 与 iPhone 手机端最优方案
+# 2026 手机移动端（iOS / Android）全平台科学上网客户端选型全景
 
-在 2026 年的科学上网与网络加速环境中，**手机客户端** 是广大用户非常关注的核心主题。随着国际网络环境与各大海外服务风控规则的持续更新，掌握准确客观的信息至关重要。
-
----
-
-## 📌 核心要点与背景剖析
-
-针对【Android 与 iPhone 手机端最优方案】，本文提供最新稳定版的官方下载渠道、跨平台安装配置教程与订阅链接一键导入分流策略指南。
-
-### 💡 2026 年的三大核心考量原则：
-1. **优先保障线路品质**：不管是专线还是中转，核心看晚高峰（20:00-23:00）的实测丢包率与稳定性；
-2. **拒绝超大额年付陷阱**：除非是运营 5 年以上的大牌服务商，否则新机场坚持按月付费；
-3. **重视 IP 纯净度**：若用于 ChatGPT、Claude 或流媒体，必须选择配备住宅原生 IP 的优质节点。
+> **【客户端选型核心速览与实测结论】**：手机端科学上网最关键的考量指标是：后台耗电量、微信国内应用不卡顿、以及海外消息推送（Push Notifications）即时到达。iOS 苹果手机首选 Shadowrocket（小火箭）；Android 安卓手机首选飞猫云自研客户端或 Surfboard。只要正确开启规则分流模式，手机全天挂载代理耗电量几乎与待机无异。
 
 ---
 
-## 🏆 2026 推荐服务商梯队与参数参考
+## 🏆 推荐搭配的主力高速专线服务商
 
-以下为通过本站 30 天连续网络监控的核心精选服务商列表：
-
-<CompareTable />
-
----
-
-## 🛠️ 实操建议与使用指引
-
-1. **客户端适配**：推荐使用新一代基于 Mihomo 内核的客户端（如 [Clash Verge Rev](/clients/clash-verge) 或 [Shadowrocket](/clients/shadowrocket)）；
-2. **规则分流**：开启“规则模式 (Rule)”，让国内流量直连、海外流量走专线代理，节省流量并降低延迟；
-3. **遇到故障自查**：若遇到节点红叹号或超时，请参考本站排障专栏：[节点全部超时排查指南](/troubleshooting/connection-failed)。
+<div v-for="item in displayAirports" :key="item.id" class="my-4">
+  <AirportCard :airport="item" />
+</div>
 
 ---
 
-## ❓ 常见问题解答 FAQ
 
-### Q1：为什么同一家机场在不同网络下速度差异很大？
-国内不同宽带运营商（电信、联通、移动）的出海骨干网路由各不相同。优质机场通常采用 **三网 BGP 入口智能就近调度**，确保无论你是电信还是移动，都能自动接入最优中转节点。
+### 移动端科学上网三大黄金法则
 
-### Q2：使用该专栏推荐的服务需要注意什么？
-请遵守当地法律法规，文明合规使用网络加速服务，切勿将节点用于违法违规用途。
+1. **绝对开启规则模式 (Rule)**：避免国内微信、外卖、地图走境外代理导致定位飘移；
+2. **保障 Google / 苹果推送通道**：将 FCM 与 APNs 推送服务器加入直连或高优先级通道；
+3. **开启自动重连与断网保护**。
 
-<TopicCluster title="Android 与 iPhone 手机端最优方案" />
+
+---
+
+## 📊 主流客户端核心特性横向大比拼
+
+| 客户端名称 | 适配操作系统 | 底层核心引擎 | TUN 模式支持 | 推荐用户阶层 | 核心优势特色 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Shadowrocket** | iOS 苹果全系 | 原生核心 | 极佳 | 苹果手机首选 | 买断制/生态完备 |
+| **飞猫云专用安卓版** | Android | 定制内核 | 内置集成 | 安卓小白首选 | 开箱即用/免配置 |
+
+---
+
+
+## 🔋 手机长续航优化设置
+
+选用轻量级传输协议（如 VLESS），杜绝在移动端开启高开销的复杂加解密算法，大幅延长电池使用寿命。
+
+
+---
+
+
+## 🚀 手机端极速上手
+
+在手机浏览器打开飞猫云用户中心，点击“一键配置”，系统会自动唤起客户端并全自动完成节点导入。
+
+
+---
+
+## ❓ 客户端下载与使用常见疑问 FAQ
+
+### Q: 手机一直挂着代理发热严重怎么解决？
+检查是否开启了全局模式或误开了大文件 P2P 下载，切换为规则分流模式即可瞬间降温。
+
+### Q: 出国后在境外还能继续用吗？
+出国后直接在客户端关闭代理开关，使用当地 Wi-Fi 或本地 SIM 卡直接访问即可。
+
+
+---
+
+<TopicCluster title="2026 手机移动端（iOS / Android）全平台科学上网客户端选型全景" />

@@ -35,6 +35,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import { affiliatesMap } from '../../../data/affiliates';
 
 const props = withDefaults(
   defineProps<{
@@ -51,6 +52,10 @@ const props = withDefaults(
 );
 
 const jumpUrl = computed(() => {
+  const aff = affiliatesMap[props.airportId];
+  if (aff && aff.targetUrl && aff.active && aff.targetUrl !== '#risk-blocked') {
+    return aff.targetUrl;
+  }
   return `/go/${props.airportId}`;
 });
 </script>

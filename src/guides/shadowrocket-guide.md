@@ -1,56 +1,130 @@
 ---
-title: Shadowrocket 扫码与添加节点完整步 (2026权威指南)
-description: 2026年最新小火箭教程指南：深度解析Shadowrocket 扫码与添加节点完整步，结合晚高峰实测数据、线路架构与价格套餐，提供专业选购与避坑指引。
+title: 2026 小火箭 Shadowrocket 扫码导入与规则分流高级配置实战
+description: 苹果iOS平台小火箭深度配置指南：扫码极速导入、远程规则白名单订阅、去广告与防断流配置。
 head:
   - - meta
     - name: keywords
-      content: 小火箭教程, 机场怎么用, 机场是什么, 订阅怎么导入, 机场节点是什么
+      content: 小火箭教程, Shadowrocket扫码导入, iOS小火箭规则, 苹果手机翻墙配置, 飞猫云小火箭
+  - - link
+    - rel: canonical
+      href: https://jichangtuijian.run/guides/shadowrocket-guide
+  - - script
+    - type: application/ld+json
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "2026 小火箭 Shadowrocket 扫码导入与规则分流高级配置实战",
+        "description": "苹果iOS平台小火箭深度配置指南：扫码极速导入、远程规则白名单订阅、去广告与防断流配置。",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://jichangtuijian.run/guides/shadowrocket-guide"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "机场推荐评测实验室",
+          "url": "https://jichangtuijian.run"
+        }
+      }
+  - - script
+    - type: application/ld+json
+    - |
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "小火箭连上后右上角为什么没有 VPN 图标？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "iOS 16 及以上系统在灵动岛或状态栏对 VPN 图标进行了折叠，下拉控制中心即可看到 VPN 运行标志。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "小火箭会消耗很多电量吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "小火箭基于原生 NetworkExtension 开发，优化极深，后台运行全天电量消耗通常低于 2%。"
+            }
+          }
+        ]
+      }
 ---
 
 <script setup>
 import { airportsData } from '../data/airports';
-const featuredList = airportsData.filter(a => a.featured && a.status === 'active');
+import AirportCard from '../.vitepress/theme/components/AirportCard.vue';
+import CompareTable from '../.vitepress/theme/components/CompareTable.vue';
+import TopicCluster from '../.vitepress/theme/components/TopicCluster.vue';
+
+const targetIds = ["feimaoyun","guangsucloud"];
+const displayAirports = airportsData.filter(a => targetIds.includes(a.id));
 </script>
 
-# Shadowrocket 扫码与添加节点完整步
+# 2026 小火箭 Shadowrocket 扫码导入与规则分流高级配置实战
 
-在 2026 年的科学上网与网络加速环境中，**小火箭教程** 是广大用户非常关注的核心主题。随着国际网络环境与各大海外服务风控规则的持续更新，掌握准确客观的信息至关重要。
-
----
-
-## 📌 核心要点与背景剖析
-
-【Shadowrocket 扫码与添加节点完整步】是为新手用户量身打造的科普与实操手册，化繁为简，助你在 5 分钟内搞懂核心概念并顺畅连通网络。
-
-### 💡 2026 年的三大核心考量原则：
-1. **优先保障线路品质**：不管是专线还是中转，核心看晚高峰（20:00-23:00）的实测丢包率与稳定性；
-2. **拒绝超大额年付陷阱**：除非是运营 5 年以上的大牌服务商，否则新机场坚持按月付费；
-3. **重视 IP 纯净度**：若用于 ChatGPT、Claude 或流媒体，必须选择配备住宅原生 IP 的优质节点。
+> **【教程核心速览与实操结论】**：Shadowrocket（小火箭）是 iPhone 与 iPad 用户科学上网的标准配置。相比繁琐的手动输入，小火箭支持全自动摄像头扫码极速导入，支持自动按需连接与远程规则分流。配合飞猫云或光速云，手机打开扫一扫即可在 3 秒内完成全部设置，国内应用极速秒开、海外服务无感加速。
 
 ---
 
-## 🏆 2026 推荐服务商梯队与参数参考
+## 🏆 推荐搭配使用的高速稳定专线服务商
 
-以下为通过本站 30 天连续网络监控的核心精选服务商列表：
-
-<CompareTable />
-
----
-
-## 🛠️ 实操建议与使用指引
-
-1. **客户端适配**：推荐使用新一代基于 Mihomo 内核的客户端（如 [Clash Verge Rev](/clients/clash-verge) 或 [Shadowrocket](/clients/shadowrocket)）；
-2. **规则分流**：开启“规则模式 (Rule)”，让国内流量直连、海外流量走专线代理，节省流量并降低延迟；
-3. **遇到故障自查**：若遇到节点红叹号或超时，请参考本站排障专栏：[节点全部超时排查指南](/troubleshooting/connection-failed)。
+<div v-for="item in displayAirports" :key="item.id" class="my-4">
+  <AirportCard :airport="item" />
+</div>
 
 ---
 
-## ❓ 常见问题解答 FAQ
 
-### Q1：为什么同一家机场在不同网络下速度差异很大？
-国内不同宽带运营商（电信、联通、移动）的出海骨干网路由各不相同。优质机场通常采用 **三网 BGP 入口智能就近调度**，确保无论你是电信还是移动，都能自动接入最优中转节点。
+### 小火箭四大核心功能模块
 
-### Q2：使用该专栏推荐的服务需要注意什么？
-请遵守当地法律法规，文明合规使用网络加速服务，切勿将节点用于违法违规用途。
+- **节点列表**：展示所有可用国家和延迟；
+- **配置规则 (Config)**：智能判定哪些网站走直连、哪些走专线；
+- **场景模式 (Scenario)**：根据 Wi-Fi 与蜂窝数据自动切换连接策略；
+- **证书管理**：用于高级 HTTPS 解密与去广告功能。
 
-<TopicCluster title="Shadowrocket 扫码与添加节点完整步" />
+
+---
+
+## 📊 核心流程步骤与防坑避雷对照表
+
+| 核心推进阶段 | 关键实操动作 | 严禁踩入的误区陷阱 | 业内标准最佳实践 | 推荐使用工具 |
+| :--- | :--- | :--- | :--- | :--- |
+| **导入阶段** | 点击右上角加号或扫码图标一秒导入 | 手动打错字符 | **直接摄像头扫码** | 飞猫云二维码 |
+| **模式设定** | 全局路由选择“配置”模式 | 误选“代理”模式 | **保证国内微信直连** | 规则分流 |
+| **启动连接** | 点击顶部开关并允许添加 VPN 描述文件 | 输入错误锁屏密码 | **指纹或面容快速确认** | iOS 系统权限 |
+
+---
+
+
+## 📱 苹果手机使用小火箭最佳设置
+
+1. 全局路由必须设置为“配置”；
+2. 开启“自动更新订阅”并设置周期为 24 小时；
+3. 允许小火箭在后台常驻运行。
+
+
+---
+
+
+## 🚀 极速实操三步法
+
+打开飞猫云后台二维码 -> 小火箭扫一扫 -> 勾选香港 01 节点并开启顶部开关，完成！
+
+
+---
+
+## ❓ 教程核心疑难解答 FAQ
+
+### Q: 小火箭连上后右上角为什么没有 VPN 图标？
+iOS 16 及以上系统在灵动岛或状态栏对 VPN 图标进行了折叠，下拉控制中心即可看到 VPN 运行标志。
+
+### Q: 小火箭会消耗很多电量吗？
+小火箭基于原生 NetworkExtension 开发，优化极深，后台运行全天电量消耗通常低于 2%。
+
+
+---
+
+<TopicCluster title="2026 小火箭 Shadowrocket 扫码导入与规则分流高级配置实战" />

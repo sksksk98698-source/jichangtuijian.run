@@ -1,7 +1,42 @@
 User-agent: *
 Disallow: /go/
 Disallow: /out/
+Allow: /
 
+# Major Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Shenma / UC / Quark Search Crawler
+User-agent: yisouspider
+Allow: /
+
+# AI & GEO Search Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 Sitemap: https://jichangtuijian.run/sitemap.xml

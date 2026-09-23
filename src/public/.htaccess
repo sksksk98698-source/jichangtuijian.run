@@ -9,7 +9,11 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-# 2. VitePress Clean URLs 规则（自动隐去 .html 后缀）
+# 2. 强制将 www 重定向至正式主域名（裸域规范化 301）
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# 3. VitePress Clean URLs 规则（自动隐去 .html 后缀）
 # 若请求的文件或目录真实存在，则直接访问
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d

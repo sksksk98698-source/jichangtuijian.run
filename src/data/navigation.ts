@@ -76,16 +76,16 @@ export const topicClusters: TopicCluster[] = [
     keywords: ['机场品牌', '机场官网', 'XX机场怎么样', 'XX机场跑路了吗', 'XX机场优惠码'],
     group: 'selection',
     subTopics: [
-      { title: '飞猫云 (FlyingCat) 完整档案', slug: 'feimaoyun', path: '/brands/feimaoyun', keyword: '飞猫云官网' },
-      { title: '宇宙云 (CosmoCloud) 完整档案', slug: 'yuzhouyun', path: '/brands/yuzhouyun', keyword: '宇宙云怎么样' },
-      { title: '速鹰666 (QuickHawk) 完整档案', slug: 'suying666', path: '/brands/suying666', keyword: '速鹰666优惠码' },
-      { title: '闪电猫 (FlashCat) 完整档案', slug: 'shandianmao', path: '/brands/shandianmao', keyword: '闪电猫评测' },
-      { title: '魔戒 (Mojie) 完整档案', slug: 'mojie', path: '/brands/mojie', keyword: '魔戒按量付费' },
+      { title: '光速云 (主推首选) 完整档案', slug: 'guangsucloud', path: '/brands/guangsucloud', keyword: '光速云官网', badge: '首推' },
+      { title: '飞猫云 (第二推荐) 完整档案', slug: 'feimaoyun', path: '/brands/feimaoyun', keyword: '飞猫云官网' },
+      { title: '微风网络 (低价专线) 完整档案', slug: 'breezenet', path: '/brands/breezenet', keyword: '微风网络怎么样' },
+      { title: '星岛梦 (老牌不限时) 完整档案', slug: 'xingdaomeng', path: '/brands/xingdaomeng', keyword: '星岛梦优惠码' },
+      { title: '无忧链接 (免转换) 完整档案', slug: 'worryfree', path: '/brands/worryfree', keyword: '无忧链接评测' },
+      { title: '宇宙云 (15元专线) 完整档案', slug: 'yuzhouyun', path: '/brands/yuzhouyun', keyword: '宇宙云官网' },
       { title: '老牌实力品牌专栏', slug: 'legacy', path: '/brands/legacy', keyword: '老牌机场名录' },
       { title: '新崛起黑马品牌专栏', slug: 'emerging', path: '/brands/emerging', keyword: '新兴机场品牌' },
       { title: '全IEPL专线品牌大全', slug: 'iepl-brands', path: '/brands/iepl-brands', keyword: 'IEPL机场品牌' },
-      { title: '纯IPLC专线品牌大全', slug: 'iplc-brands', path: '/brands/iplc-brands', keyword: 'IPLC机场品牌' },
-      { title: '高密BGP中转品牌大全', slug: 'bgp-brands', path: '/brands/bgp-brands', keyword: '中转机场品牌' }
+      { title: '纯IPLC专线品牌大全', slug: 'iplc-brands', path: '/brands/iplc-brands', keyword: 'IPLC机场品牌' }
     ]
   },
   {
@@ -97,11 +97,11 @@ export const topicClusters: TopicCluster[] = [
     keywords: ['机场评测', '机场实测', 'XX机场评测', '机场体验报告'],
     group: 'selection',
     subTopics: [
+      { title: '光速云 2026 深度实机评测', slug: 'guangsucloud', path: '/reviews/guangsucloud', keyword: '光速云评测', badge: '首推' },
       { title: '飞猫云 2026 全面实机评测', slug: 'feimaoyun', path: '/reviews/feimaoyun', keyword: '飞猫云评测', badge: '精华' },
-      { title: '宇宙云 6年老牌极客使用报告', slug: 'yuzhouyun', path: '/reviews/yuzhouyun', keyword: '宇宙云评测' },
-      { title: '速鹰666 平价百G体验评测', slug: 'suying666', path: '/reviews/suying666', keyword: '速鹰666实测' },
-      { title: '闪电猫 Hysteria2 弱网加速评测', slug: 'shandianmao', path: '/reviews/shandianmao', keyword: '闪电猫速度' },
-      { title: '魔戒 不限时按量模式真实体验', slug: 'mojie', path: '/reviews/mojie', keyword: '魔戒好用吗' },
+      { title: '微风网络 低价IEPL实机评测', slug: 'breezenet', path: '/reviews/breezenet', keyword: '微风网络实测' },
+      { title: '星岛梦 老牌内网专线深度报告', slug: 'xingdaomeng', path: '/reviews/xingdaomeng', keyword: '星岛梦评测' },
+      { title: '宇宙云 15元档VLESS实机评测', slug: 'yuzhouyun', path: '/reviews/yuzhouyun', keyword: '宇宙云评测' },
       { title: '晚高峰 21点 拥堵度实机抽测', slug: 'peak-stress-test', path: '/reviews/peak-stress-test', keyword: '晚高峰评测' },
       { title: 'AI (ChatGPT/Claude) 连通性专项评测', slug: 'ai-matrix-review', path: '/reviews/ai-matrix-review', keyword: 'AI解锁评测' },
       { title: '主流全平台客户端兼容实测', slug: 'client-compatibility', path: '/reviews/client-compatibility', keyword: '客户端兼容评测' },
@@ -118,8 +118,9 @@ export const topicClusters: TopicCluster[] = [
     keywords: ['机场对比', 'XX vs YY', '机场哪个好', 'IEPL与IPLC区别'],
     group: 'selection',
     subTopics: [
-      { title: '飞猫云 vs 宇宙云：高端IEPL谁更稳？', slug: 'feimao-vs-yuzhou', path: '/compare/feimao-vs-yuzhou', keyword: '飞猫云vs宇宙云', badge: '热门' },
-      { title: '速鹰666 vs 闪电猫：20元档性价比之争', slug: 'suying-vs-shandian', path: '/compare/suying-vs-shandian', keyword: '速鹰vs闪电猫' },
+      { title: '光速云 vs 飞猫云：老牌旗舰对决新锐专线', slug: 'guangsu-vs-feimao', path: '/compare/guangsu-vs-feimao', keyword: '光速云vs飞猫云', badge: '热门' },
+      { title: '飞猫云 vs 宇宙云：高端IEPL谁更稳？', slug: 'feimao-vs-yuzhou', path: '/compare/feimao-vs-yuzhou', keyword: '飞猫云vs宇宙云' },
+      { title: '微风网络 vs 星岛梦：低价年付与不限时之争', slug: 'breeze-vs-xingdao', path: '/compare/breeze-vs-xingdao', keyword: '微风vs星岛梦' },
       { title: '三家老牌专线机场百项参数大横评', slug: 'triple-flagship', path: '/compare/triple-flagship', keyword: '三家机场横评' },
       { title: '15元套餐 vs 30元套餐体验差异真相', slug: 'price-tier-gap', path: '/compare/price-tier-gap', keyword: '10元与30元机场区别' },
       { title: 'IEPL 内网专线 vs IPLC 专线区别详解', slug: 'iepl-vs-iplc', path: '/compare/iepl-vs-iplc', keyword: 'IEPL与IPLC对比' },

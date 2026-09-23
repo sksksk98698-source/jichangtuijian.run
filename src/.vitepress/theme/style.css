@@ -222,3 +222,87 @@ body {
 .compare-table tr:last-child td {
   border-bottom: none;
 }
+
+/* 移动端全面响应式与防横向滚动加固 (375px / 390px / 430px / 768px / 1024px / 1440px) */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* 文档内表格移动端水平滑动防挤压 */
+.vp-doc table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.25rem 0;
+  border-collapse: collapse;
+}
+
+.vp-doc table th,
+.vp-doc table td {
+  white-space: nowrap;
+}
+
+.vp-doc table th:first-child,
+.vp-doc table td:first-child {
+  white-space: normal;
+  min-width: 110px;
+}
+
+/* 长文本与代码块防溢出 */
+.vp-doc p,
+.vp-doc li,
+.vp-doc dd {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.vp-doc a {
+  word-break: break-word;
+}
+
+.vp-doc pre {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 手机端 (小于640px) 视觉与按钮适配 */
+@media (max-width: 640px) {
+  .cream-card {
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+
+  .hero-box {
+    padding: 24px 12px !important;
+  }
+
+  .hero-title {
+    font-size: 26px !important;
+    line-height: 1.3 !important;
+  }
+
+  .hero-btn-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px !important;
+  }
+
+  .hero-btn-group .btn-primary,
+  .hero-btn-group .btn-outline {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .section-header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+

@@ -1,5 +1,12 @@
 import { defineConfig } from 'vitepress';
 import { navGroups, topicClusters } from '../data/navigation';
+import { buildPageSeo } from './seo-helper';
+
+// 搜索引擎站长平台所有权验证（支持环境变量注入或直接配置）
+const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION || '';
+const BING_SITE_VERIFICATION = process.env.BING_SITE_VERIFICATION || '';
+const SHENMA_SITE_VERIFICATION = process.env.SHENMA_SITE_VERIFICATION || '';
+const BAIDU_SITE_VERIFICATION = process.env.BAIDU_SITE_VERIFICATION || '';
 
 export default defineConfig({
   title: '机场推荐',
@@ -15,8 +22,20 @@ export default defineConfig({
       return items.filter((item) => !item.url.startsWith('go/'));
     }
   },
+  transformHead(context) {
+    return buildPageSeo(context.pageData);
+  },
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    [
+      'link',
+      {
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: '机场推荐 RSS 2.0 订阅源',
+        href: 'https://jichangtuijian.run/rss.xml'
+      }
+    ],
     ['meta', { name: 'author', content: '机场推荐网 jichangtuijian.run' }],
     [
       'meta',
@@ -26,25 +45,10 @@ export default defineConfig({
           '机场推荐, 机场推荐2026, 2026机场推荐, 稳定机场推荐, 性价比机场, 便宜机场, IEPL机场, IPLC机场, ChatGPT机场, 机场排行, 机场跑路'
       }
     ],
-    ['meta', { property: 'og:site_name', content: '机场推荐 (jichangtuijian.run)' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    [
-      'script',
-      { type: 'application/ld+json' },
-      JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        name: '机场推荐',
-        url: 'https://jichangtuijian.run',
-        description: '2026专业机场推荐与评测导航知识图谱',
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: 'https://jichangtuijian.run/?q={search_term_string}',
-          'query-input': 'required name=search_term_string'
-        }
-      })
-    ]
+    ...(GOOGLE_SITE_VERIFICATION ? [['meta', { name: 'google-site-verification', content: GOOGLE_SITE_VERIFICATION }]] : []),
+    ...(BING_SITE_VERIFICATION ? [['meta', { name: 'msvalidate.01', content: BING_SITE_VERIFICATION }]] : []),
+    ...(SHENMA_SITE_VERIFICATION ? [['meta', { name: 'shenma-site-verification', content: SHENMA_SITE_VERIFICATION }]] : []),
+    ...(BAIDU_SITE_VERIFICATION ? [['meta', { name: 'baidu-site-verification', content: BAIDU_SITE_VERIFICATION }]] : [])
   ],
   themeConfig: {
     siteTitle: '机场推荐',
@@ -102,6 +106,13 @@ export default defineConfig({
           { text: '10 客户端下载', link: '/clients/' },
           { text: '11 教程中心', link: '/guides/' },
           { text: '12 网络排障', link: '/troubleshooting/' }
+        ]
+      },
+      {
+        text: '🧮 选机工具',
+        items: [
+          { text: '智能流量测算与推荐器', link: '/tools/calculator' },
+          { text: '工具箱索引', link: '/tools/' }
         ]
       },
       {
@@ -206,6 +217,16 @@ export default defineConfig({
           text: '14 风险情报雷达',
           collapsed: false,
           items: topicClusters[13].subTopics.map((s) => ({ text: s.title, link: s.path }))
+        }
+      ],
+      '/tools/': [
+        {
+          text: '🧮 实用工具箱',
+          collapsed: false,
+          items: [
+            { text: '智能流量测算与推荐器', link: '/tools/calculator' },
+            { text: '工具箱索引', link: '/tools/' }
+          ]
         }
       ]
     },

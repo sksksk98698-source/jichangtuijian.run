@@ -25,7 +25,7 @@ import TopicCluster from '../.vitepress/theme/components/TopicCluster.vue';
 
 ### 2. IP 属性与解锁
 - [纯原生 IP (Native IP) 与住宅 IP 机场精选](/lines/native-ip) —— 专破 ChatGPT 4o、Claude 3.5 与流媒体风控
-- [香港 / 日本 / 美国节点专属推荐](/lines/regional-nodes) —— 各大主流热点国家线路优化
+- [香港 / 日本 / 美国优质低延迟节点精选](/lines/hongkong) —— 各大主流热点国家线路优化指南
 
 ---
 

@@ -20,6 +20,9 @@
         <a href="/recommend/2026" class="btn-primary">
           🔥 2026 综合首选推荐 →
         </a>
+        <a href="/tools/calculator" class="btn-primary" style="background: #15803D; border-color: #15803D;">
+          🧮 智能选机计算器
+        </a>
         <a href="/ranking/peak-hours" class="btn-outline">
           ⚡ 晚高峰抗拥堵排行榜
         </a>
@@ -100,6 +103,11 @@
           <div class="cluster-name">风险情报</div>
         </a>
       </div>
+    </section>
+
+    <!-- 智能选机测算工具交互区 -->
+    <section class="section-block">
+      <TrafficCalculator />
     </section>
 
     <!-- 2026 精选梯队推荐卡片展示 -->

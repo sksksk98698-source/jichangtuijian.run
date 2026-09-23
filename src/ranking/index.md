@@ -24,12 +24,12 @@ import TopicCluster from '../.vitepress/theme/components/TopicCluster.vue';
 
 | 专项榜单 | 核心考核维度 | 推荐首选 | 榜单详情 |
 | :--- | :--- | :--- | :--- |
-| **晚高峰抗拥堵榜** | 20:00-23:00 黄金时段丢包率与测速 | 飞猫云 (IEPL) | [查看晚高峰榜单 →](/ranking/peak-hours) |
-| **99.9% 稳定天梯榜** | 30 天连续在线 SLA 与容灾漂移 | 宇宙云 (IPLC) | [查看稳定性榜单 →](/ranking/stability) |
-| **极致性价比天梯榜** | 单 G 流量均价与起步门槛 | 速鹰666 | [查看性价比榜单 →](/ranking/cost-effective) |
-| **AI 原生解锁天梯榜** | ChatGPT / Claude / Gemini 成功率 | 飞猫云 | [查看 AI 解锁榜 →](/ranking/ai-unlock) |
-| **流媒体 4K 极速榜** | Netflix / Disney+ / YouTube 8K | 闪电猫 (Hy2) | [查看流媒体榜 →](/ranking/streaming) |
-| **不限时按量备用榜** | 流量永久有效、不月底清零 | 魔戒 (Mojie) | [查看按量榜单 →](/pricing/never-expire) |
+| **晚高峰抗拥堵榜** | 20:00-23:00 黄金时段丢包率与测速 | 光速云 (首推IEPL) | [查看晚高峰榜单 →](/ranking/peak-hours) |
+| **99.9% 稳定天梯榜** | 30 天连续在线 SLA 与容灾漂移 | 光速云 (老牌专线) | [查看稳定性榜单 →](/ranking/stability) |
+| **极致性价比天梯榜** | 单 G 流量均价与起步门槛 | 飞猫云 / 微风网络 | [查看性价比榜单 →](/ranking/cost-effective) |
+| **AI 原生解锁天梯榜** | ChatGPT / Claude / Gemini 成功率 | 速界 / 光速云 | [查看 AI 解锁榜 →](/ranking/ai-unlock) |
+| **流媒体 4K 极速榜** | Netflix / Disney+ / YouTube 8K | 飞猫云 / 一翻云 | [查看流媒体榜 →](/ranking/streaming) |
+| **不限时按量备用榜** | 流量永久有效、不月底清零 | 星岛梦 (Xingdaomeng) | [查看按量榜单 →](/pricing/never-expire) |
 
 ---
 

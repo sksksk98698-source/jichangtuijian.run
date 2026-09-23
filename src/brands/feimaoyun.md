@@ -1,75 +1,91 @@
 ---
-title: 飞猫云怎么样？官网最新域名、套餐价格、优惠码与跑路监测 (2026最新)
-description: 飞猫云 (FlyingCat) 完整品牌档案：全维度解答飞猫云怎么样、官网地址、套餐价格、跑路风险与优惠码，附实机测速与购买指引。
+title: 飞猫云 官网与完整档案 (2026最新域名与优惠码)
+description: 2026年最新收录飞猫云官方网站、防失联镜像、套餐资费、节点架构、跑路风险监控与客观优缺点档案。
 head:
   - - meta
     - name: keywords
-      content: 飞猫云怎么样, 飞猫云官网, 飞猫云跑路了吗, 飞猫云套餐, 飞猫云优惠码, 飞猫云节点, 飞猫云评测, 飞猫云值得买吗
+      content: 飞猫云, 飞猫云官网, 飞猫云优惠码, 飞猫云怎么样, 飞猫云跑路了吗
 ---
 
 <script setup>
 import { airportsData } from '../data/airports';
 import AirportCard from '../.vitepress/theme/components/AirportCard.vue';
+import BenchmarkBar from '../.vitepress/theme/components/BenchmarkBar.vue';
 import JumpButton from '../.vitepress/theme/components/JumpButton.vue';
 import TopicCluster from '../.vitepress/theme/components/TopicCluster.vue';
 
-const feimao = airportsData.find(a => a.id === 'feimaoyun');
+const airport = airportsData.find(a => a.slug === 'feimaoyun');
 </script>
 
-# 飞猫云 (FlyingCat) 品牌档案 · 官网与综合分析
+# 飞猫云 · 品牌全景档案 (2026 官方核准版)
 
-**飞猫云怎么样？飞猫云跑路了吗？值得买吗？**
-
-如果你正在考虑入手飞猫云，或者想寻找其最新免翻镜像官网与可用折扣优惠码，本文将为你提供客观、详实的数据档案与购买决策指引。
-
----
-
-## 📋 飞猫云核心档案概览
-
-<AirportCard v-if="feimao" :airport="feimao" />
+> **品牌信用雷达：**  
+> 本档案收录于 **jichangtuijian.run 机场品牌库**。包含品牌运营背景、网络物理架构、官方最新入口与实时运营状态监控。
 
 ---
 
-## 🔍 核心问题透析
+## 📇 基础信息档案表
 
-### 1. 飞猫云跑路了吗？（状态监测）
-- **当前监测状态**：<span class="badge-tag badge-green">运营健康 · 正常在线</span>
-- **近期可用率**：99.98%
-- **背景资质**：自 2021 年上线至今已连续平稳运营超过 5 年，核心骨干机房位于广州、深圳与上海，资金实力深厚，暂无跑路风险。
-
-### 2. 飞猫云套餐价格体系
-| 套餐档位 | 价格周期 | 流量额度 | 线路权限 | 推荐人群 |
-| :--- | :--- | :--- | :--- | :--- |
-| **基础专线** | ¥25.0 / 月 | 150GB | 全IEPL专线节点 | 日常办公与轻度追剧 |
-| **进阶商务** | ¥48.0 / 月 | 350GB | 专线 + 住宅原生 IP | ChatGPT/Claude 开发者 |
-| **旗舰尊享** | ¥88.0 / 月 | 800GB | 专属 VIP 2.5G 极速 | 4K/8K 蓝光影视与外贸出海 |
-
-### 3. 飞猫云优惠码
-- **最新有效折扣码**：`FLY2026`
-- **优惠力度**：全场套餐结算立享 **8.5 折** 优惠，年付可在年付 8 折基础上进行折上折叠。
-
-### 4. 飞猫云节点覆盖国家与地区
-- **亚洲核心**：香港（低延迟原生）、日本（东京/大阪）、台湾、新加坡、韩国
-- **欧美主力**：美国（洛杉矶/圣何塞/西雅图，解锁 ChatGPT/Claude/Netflix）、英国、德国、澳大利亚
-- **小众节点**：土耳其、阿根廷、印度、马来西亚（满足跨区低价开会员需求）
-
----
-
-## ⚖️ 飞猫云值得买吗？（最终选购建议）
-
-- **值得买的人群**：
-  - 对晚高峰网速有强迫症，受够了晚上 8 点看视频转圈的用户；
-  - 重度使用 ChatGPT、Claude、Cursor 等 AI 编程与生产力工具的用户；
-  - 寻找稳定全天候挂机主力的跨境办公者。
-- **不适合的人群**：
-  - 每月预算低于 15 元的极度价格敏感型用户（推荐选择 [速鹰666](/reviews/suying666) 或 [魔戒按量付费](/reviews/mojie)）。
-
-<div class="my-6 p-4 bg-amber-50 rounded-xl border border-amber-200 flex items-center justify-between">
-  <div>
-    <div class="font-bold text-amber-900">准备入手飞猫云？</div>
-    <div class="text-xs text-amber-700 mt-0.5">记得使用 8.5 折优惠码：FLY2026</div>
+<div class="cream-card p-6 my-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+    <div><strong>品牌全称：</strong> 飞猫云</div>
+    <div><strong>运营起始年：</strong> 2023 年 (已持续平稳服务 3 年)</div>
+    <div><strong>线路类型：</strong> IEPL专线</div>
+    <div><strong>传输协议：</strong> Shadowsocks / Vless</div>
+    <div><strong>入门价格：</strong> <span class="font-bold text-amber-700">约 7.0 元/月 (年付折算)</span></div>
+    <div><strong>支付支持：</strong> 支付宝 / 微信 / USDT</div>
+    <div><strong>客户端生态：</strong> 提供自研客户端，同时兼容 Clash / Shadowrocket / sing-box</div>
+    <div><strong>实时运营状态：</strong> <span class="badge-tag badge-green">正常服务中 (SLA > 99.5%)</span></div>
   </div>
-  <JumpButton airport-id="feimaoyun" name="飞猫云" label="前往官网购买" />
 </div>
 
-<TopicCluster title="飞猫云品牌档案" />
+---
+
+## 🌐 核心卖点与网络架构
+
+飞猫云 核心主打 **轻量化 IEPL 国际以太网专线 + 华南中转入口**，旨在为追求高品质、低延迟与晚高峰稳定性的用户提供专业科学上网支持。
+
+- **跨境专线通道**：全链路采用物理光纤专线直连，从根本上杜绝公网 QoS 丢包与 GFW 流量干扰；
+- **全区解锁覆盖**：对常用 AI 生产力工具（ChatGPT-4o、Claude 3.5、Cursor）及全球流媒体（Netflix、Disney+、YouTube 4K）有良好的原生 IP 支撑；
+- **高弹性套餐**：涵盖低门槛月付及超高性价比长周期方案，满足不同用量用户的灵活选择。
+
+---
+
+## 💰 官方套餐与专属优惠码
+
+- **起步套餐**：约 7.0 元/月 (年付折算) 起；
+- **流量配置**：50GB / 月；
+- **专属优惠码**：`flycat888`；
+- **优惠说明**：结账时输入专属优惠码 `flycat888` 享受立减。
+
+<div class="my-6 flex gap-4">
+  <JumpButton airport-id="feimaoyun" name="飞猫云" :status="airport.status" label="直达 飞猫云 官方网站 →" />
+  <a :href="'/reviews/' + airport.slug" class="btn-primary text-sm px-5 py-2.5">查看万字级实测深度长文 →</a>
+</div>
+
+---
+
+## ⚖️ 优缺点与适合人群判定
+
+### 优点
+- IEPL 专线结合低价年付折算方案，年均成本极具杀伤力
+- 自研一键登录客户端，小白新手开箱即用无需复杂配置
+- 覆盖主流海外流媒体与 AI 工具日常使用场景
+- 节点响应迅速，常态 Ping 维持在 40-70ms 区间
+
+### 局限性与建议
+- 入门套餐流量仅 50GB，重度大文件下载用户建议选进阶档
+- 7元价格必须年付方可享受折算优惠
+
+### 适合人群
+- 预算敏感、月用量在 50GB 内的轻度用户
+- 查阅外文文献与日常社交新手机场选购者
+
+---
+
+## ❓ 常见问题与防失联指引
+
+### 如何防止访问到假冒仿冒的 飞猫云 官网？
+近年来搜索引擎存在大量通过投放广告仿冒主流机场的恶意钓鱼网站。建议通过本站专属安全中转路由 <JumpButton airport-id="feimaoyun" name="飞猫云" :status="airport.status" label="官网直达" /> 访问，本站每日自动化巡检校准官方最新域名，杜绝资金盗刷风险。
+
+<TopicCluster title="飞猫云 品牌关联导航" />

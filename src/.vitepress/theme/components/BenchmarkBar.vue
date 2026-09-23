@@ -1,42 +1,42 @@
 <template>
-  <div class="benchmark-bar-container my-3 p-3.5 bg-stone-50 rounded-xl border border-stone-200/80">
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+  <div class="benchmark-box">
+    <div class="benchmark-grid">
       <!-- 速度评分 -->
-      <div class="p-2 bg-white rounded-lg border border-stone-200/60 shadow-2xs">
-        <div class="text-xs text-stone-500 font-medium">实测速度评分</div>
-        <div class="text-lg font-bold text-amber-700 mt-0.5 font-mono">{{ speedScore }}<span class="text-xs font-normal text-stone-400">/100</span></div>
-        <div class="w-full bg-stone-100 h-1.5 rounded-full mt-1.5 overflow-hidden">
-          <div class="bg-amber-600 h-full rounded-full" :style="{ width: `${speedScore}%` }"></div>
+      <div class="stat-card">
+        <div class="stat-label">实测速度评分</div>
+        <div class="stat-value text-amber">{{ speedScore }}<span class="stat-unit">/100</span></div>
+        <div class="stat-progress">
+          <div class="progress-bar bar-amber" :style="{ width: `${speedScore}%` }"></div>
         </div>
       </div>
 
       <!-- 稳定性 -->
-      <div class="p-2 bg-white rounded-lg border border-stone-200/60 shadow-2xs">
-        <div class="text-xs text-stone-500 font-medium">晚高峰稳定性</div>
-        <div class="text-lg font-bold text-emerald-700 mt-0.5 font-mono">{{ stabilityScore }}<span class="text-xs font-normal text-stone-400">/100</span></div>
-        <div class="w-full bg-stone-100 h-1.5 rounded-full mt-1.5 overflow-hidden">
-          <div class="bg-emerald-600 h-full rounded-full" :style="{ width: `${stabilityScore}%` }"></div>
+      <div class="stat-card">
+        <div class="stat-label">晚高峰稳定性</div>
+        <div class="stat-value text-emerald">{{ stabilityScore }}<span class="stat-unit">/100</span></div>
+        <div class="stat-progress">
+          <div class="progress-bar bar-emerald" :style="{ width: `${stabilityScore}%` }"></div>
         </div>
       </div>
 
       <!-- 节点规模 -->
-      <div class="p-2 bg-white rounded-lg border border-stone-200/60 shadow-2xs">
-        <div class="text-xs text-stone-500 font-medium">全球节点数</div>
-        <div class="text-sm font-bold text-stone-800 mt-1 font-mono truncate">{{ nodesCount || '70+ 节点' }}</div>
-        <div class="text-[11px] text-stone-400 mt-1">港/台/日/新/美/英</div>
+      <div class="stat-card">
+        <div class="stat-label">全球节点数</div>
+        <div class="stat-value-text">{{ nodesCount || '70+ 节点' }}</div>
+        <div class="stat-sub">港/台/日/新/美/英</div>
       </div>
 
       <!-- 带宽规格 -->
-      <div class="p-2 bg-white rounded-lg border border-stone-200/60 shadow-2xs">
-        <div class="text-xs text-stone-500 font-medium">专线带宽峰值</div>
-        <div class="text-sm font-bold text-stone-800 mt-1 font-mono truncate">{{ bandwidth || '1Gbps 峰值' }}</div>
-        <div class="text-[11px] text-stone-400 mt-1">低延迟双向保障</div>
+      <div class="stat-card">
+        <div class="stat-label">专线带宽峰值</div>
+        <div class="stat-value-text">{{ bandwidth || '1Gbps 峰值' }}</div>
+        <div class="stat-sub">低延迟双向保障</div>
       </div>
     </div>
 
     <!-- 解锁状态标签组 -->
-    <div v-if="streaming || ai" class="mt-3 pt-2.5 border-t border-stone-200/70 flex flex-wrap items-center gap-2 text-xs">
-      <span class="text-stone-500 font-medium text-[11px]">实测解锁：</span>
+    <div v-if="streaming || ai" class="unlock-strip">
+      <span class="unlock-title">实测解锁：</span>
       
       <span v-if="streaming?.netflix" class="badge-tag badge-green">Netflix 4K</span>
       <span v-if="streaming?.youtube4k" class="badge-tag badge-green">YouTube 8K</span>
@@ -72,3 +72,115 @@ defineProps<{
   };
 }>();
 </script>
+
+<style scoped>
+.benchmark-box {
+  margin: 14px 0;
+  padding: 14px;
+  background: #FDFBF7;
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-border);
+}
+
+.benchmark-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .benchmark-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat-card {
+  padding: 10px 8px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  border: 1px solid #ECE7DE;
+  box-shadow: 0 1px 3px rgba(28, 25, 23, 0.03);
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #78716C;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: var(--vp-font-family-mono);
+  margin-top: 2px;
+}
+
+.stat-unit {
+  font-size: 11px;
+  font-weight: 400;
+  color: #A8A29E;
+}
+
+.text-amber {
+  color: #B45309;
+}
+
+.text-emerald {
+  color: #047857;
+}
+
+.stat-value-text {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1C1917;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stat-sub {
+  font-size: 11px;
+  color: #A8A29E;
+  margin-top: 2px;
+}
+
+.stat-progress {
+  width: 100%;
+  height: 5px;
+  background: #F3EFEA;
+  border-radius: 9999px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+.bar-amber {
+  background: #D97706;
+}
+
+.bar-emerald {
+  background: #059669;
+}
+
+.unlock-strip {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #EAE4DA;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.unlock-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #78716C;
+}
+</style>

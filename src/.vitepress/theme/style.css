@@ -1,7 +1,6 @@
-/**
- * 品牌化简奶白主题 (Cream Editorial Milk-White Theme)
- * 专为 jichangtuijian.run 定制，结合温暖奶白纸性质感与专业评测杂志排版
- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* 奶白核心背景系统 */

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev src",
+    "generate:pages": "node --experimental-strip-types scripts/generate-pages.ts",
     "build": "vitepress build src && pagefind --site src/.vitepress/dist",
     "build:no-search": "vitepress build src",
     "preview": "vitepress preview src",
